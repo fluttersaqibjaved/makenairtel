@@ -11,7 +11,7 @@ void main() {
     Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          title: 'Airtel',
+          title: '',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch: Colors.blue,

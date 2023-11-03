@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:makenairtel/Views/welcome_view.dart';
 
 class VerifyEmailView extends StatefulWidget {
   const VerifyEmailView({Key? key}) : super(key: key);
@@ -23,13 +24,16 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                 "If you haven't received a verification email yet, press the button below"),
             TextButton(
               onPressed: () {
-                // Handle email verification resend action here
+              //   final user = FirebaseAuth.instance.currentUser;
+              // await user?.sendEmailVerification();
               },
               child: Container(child: const Text('Resend email verification')),
             ),
             TextButton(
               onPressed: () async {
-                // Handle restart action here
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                        return WelcomeView();
+                      }));
               },
               child: const Text('Restart'),
             )

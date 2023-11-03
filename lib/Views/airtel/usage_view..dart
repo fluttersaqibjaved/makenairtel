@@ -53,8 +53,8 @@ class _UsageViewState extends State<UsageView> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                  Container(
-  width: 30.w,
-  height: 10.h,
+  width: 40.w,
+  height: 20.h,
   decoration: BoxDecoration(
   shape: BoxShape.circle,
   color: Colors.grey.withOpacity(0.5),
@@ -63,8 +63,18 @@ class _UsageViewState extends State<UsageView> {
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: [
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      Container(
+       width: 33.w,
+       height: 17.h,
+       decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(
+        color: Colors.red,
+           width: 6.sp,
+    ),
+       ),
+          child:  Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'other plans',
@@ -74,6 +84,7 @@ class _UsageViewState extends State<UsageView> {
             ),
           ),
         ],
+      ),
       ),
     ],
   ),
@@ -256,6 +267,7 @@ class _UsageViewState extends State<UsageView> {
                 ),
               ],
             ),
+            Divider(color: Colors.black),
             SizedBox(width: 30),
              Container(
                   width: 20.w, 
@@ -295,14 +307,14 @@ class _UsageViewState extends State<UsageView> {
             ),
             child: Center(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                        Container(
   width: 30.w,
-  height: 5.h,
+  height: 8.h,
   decoration: BoxDecoration(
     shape: BoxShape.circle, 
     color: Colors.yellow,
@@ -314,8 +326,8 @@ class _UsageViewState extends State<UsageView> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
          Container(
-  width: 10.0,
-  height: 10.0, 
+  width: 20.w,
+  height: 6.h, 
   decoration: BoxDecoration(
     shape: BoxShape.circle, 
     border: Border.all(

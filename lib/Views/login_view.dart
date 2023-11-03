@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/airtel/airtel_view.dart';
 import 'package:makenairtel/Views/forgot_password_view.dart';
@@ -162,13 +163,29 @@ class _LoginViewState extends State<LoginView> {
                   ),
 
                       SizedBox(height: 8.0),
-                      TextButton(
-                        onPressed: () {
-                           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                        TextButton(
+            onPressed: () async {
+              final email = _email.text;
+              final password = _password.text;
+              try {
+                final userCredential =
+                    await FirebaseAuth.instance.signInWithEmailAndPassword(
+                  email: email,
+                  password: password,
+                );
+                     Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                         return AirtelView();
                       }));
-                        },
-                        child: Container(
+                print(userCredential);
+              } on FirebaseAuthException catch (e) {
+                if (e.code == 'user-not-found') {
+                  print('User not found');
+                } else if (e.code == 'wrong-password') {
+                  print('Wrong password');
+                }
+              }
+            },
+            child: Container(
                           alignment: Alignment.center,
                           width: 100.w,
                           height: 7.h,
@@ -179,7 +196,7 @@ class _LoginViewState extends State<LoginView> {
                           child: Text('LOGIN',
                               style: TextStyle(color: Colors.white, fontSize: 20)),
                         ),
-                      ),
+          ),
                     ],
                   ),
                 ),
