@@ -21,10 +21,7 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for android - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
@@ -54,6 +51,14 @@ class DefaultFirebaseOptions {
     authDomain: 'makenairtel.firebaseapp.com',
     storageBucket: 'makenairtel.appspot.com',
     measurementId: 'G-BE220KW0RC',
+  );
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyAWzxEcQH9mrnvzsVdGFw0kkYjVaB0vXIs',
+    appId: '1:778523140147:android:0a1ca1c0728633484ac346',
+    messagingSenderId: '778523140147',
+    projectId: 'makenairtel',
+    storageBucket: 'makenairtel.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(

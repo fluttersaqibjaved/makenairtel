@@ -12,190 +12,395 @@ class _ModemViewState extends State<ModemView> {
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-      appBar: AppBar(
-        leading: Image.asset(
-          'assets/images/Group 192.png',
-          width: 100,
-          height: 100,
-        ),
-        backgroundColor: Colors.white,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: Colors.black,
-            ),
-            onPressed: () {
-              print('Notification button pressed');
-            },
-          ),
-        ],
-      ),
+      appBar: null,
       body: Column(
         children: [
-          Container(
-            width: 100.h,
-            height: 10.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+          SizedBox(height: 10),
+          Container( 
+            width: 90.w,
+            height: 50.h,
+          color: Colors.white,
+          
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Kalutara, Changetower',
+                Row(
+                  children: [
+                       Text(
+                  ' Kalutara',
                   style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 5,
+                    color: Colors.black,
+                    fontSize:15,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+                SizedBox(width: 50.w),
                 Text(
-                  'last updated on 1:15 PM, Fri, Nov 1, 2019',
+                  'Change tower',
                   style: TextStyle(
                     color: Colors.red,
-                    fontSize: 5,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                 Text(
-                  'updates every 60mins automaticalyy',
+                  ],
+                ),
+                SizedBox(height: 30),
+              Row(
+                children: [
+                   Text(
+                  ' last updated on',
                   style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 5,
+                    color: Colors.black,
+                    fontSize: 10,
                   ),
                 ),
-              ],
-            ),
-          ),
-          SizedBox(height: 16.0),
-          Row(
+                Text(
+                  '  1:15 PM, Fri, Nov 1, 2019',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                ],
+              ), 
+              Row(
+                children: [
+                     Text(
+                  ' updates every 60mins automaticalyy',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 10,
+                  ),
+                ),
+                SizedBox(width: 40.w),
+                 Image.asset(
+                          'assets/images/Group 70.png',
+                          width: 24, 
+                          height: 24,
+                        ),
+                ],
+              ),
+                Divider(
+                  color: Colors.grey,
+                ),
+                SizedBox(height: 10),
+                 Row(
             children: [
               Expanded(
                 child: Container(
-                  width: 150,
-                  height: 150,
+                 width: 15.w,
+                  height: 15.h,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+                    color: Colors.pinkAccent.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(5.sp),
+                            border: Border.all(
+                              color: Colors.pink,
+                              width: 1.sp,
+                            ),
+                          ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Signal strenth, 85 %',
+                      Column(
+                        children: [
+                           Image.asset(
+                          'assets/images/Group 152.png',
+                          width: 24, 
+                          height: 24,
+                        ),
+                         SizedBox(height: 10),
+                             Text(
+                        'Signal strenth',
                         style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 5,
+                          color: Colors.black,
+                          fontSize: 15,
                         ),
                       ),
+                       SizedBox(height: 10),
+                       Text(
+                        '85 %',
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                        ],
+                      ),
+                     
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 16.0),
+              SizedBox(width: 8.0),
               Expanded(
                 child: Container(
-                  width: 150,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+                  width: 15.w,
+                  height: 15.h,
+                 decoration: BoxDecoration(
+                  color: Colors.blueAccent.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(5.sp),
+                            border: Border.all(
+                              color: Colors.blue,
+                              width: 1.sp,
+                            ),
+                          ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Ping rate, 14 ms',
+                      Column(
+                        children: [
+                            Image.asset(
+                          'assets/images/Group 153.png',
+                          width: 24, 
+                          height: 24,
+                        ),
+                        SizedBox(height: 10),
+                              Text(
+                        'Ping rate',
                         style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 5,
+                          color: Colors.black,
+                          fontSize: 15,
                         ),
                       ),
+                       SizedBox(height: 10),
+                      Text(
+                        '14 ms',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                        ],
+                      ),
+                      
                     ],
                   ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 16.0),
+          SizedBox(height: 8.0),
            Row(
             children: [
               Expanded(
                 child: Container(
-                  width: 150,
-                  height: 150,
+                 width: 15.w,
+                  height: 15.h,
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+                    color: Colors.yellowAccent.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(5.sp),
+                            border: Border.all(
+                              color: Colors.yellow,
+                              width: 1.sp,
+                            ),
+                          ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                       Text(
-                        'Download speed, 210.mb/s',
+                      Column(
+                        children: [
+                            Image.asset(
+                          'assets/images/Group -2.png',
+                          width: 24, 
+                          height: 24,
+                        ),
+                         SizedBox(height: 10),
+                          Text(
+                        'Download speed',
                         style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 5,
+                          color: Colors.black,
+                          fontSize: 15,
                         ),
                       ),
+                       SizedBox(height: 10),
+                       Text(
+                        '210.mb/s',
+                        style: TextStyle(
+                          color: Colors.yellow,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                        ],
+                      ),
+                      
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 16.0),
+              SizedBox(width: 8.0),
               Expanded(
                 child: Container(
-                  width: 150,
-                  height: 150,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                  ),
+                  width: 15.w,
+                  height: 15.h,
+                 decoration: BoxDecoration(
+                  color: Colors.purpleAccent.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(5.sp),
+                            border: Border.all(
+                              color: Colors.purpleAccent,
+                              width: 1.sp,
+                            ),
+                          ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'Uploadspeed, 11.8 mb/s',
+                      Column(
+                        children: [
+                            Image.asset(
+                          'assets/images/Group -1.png',
+                          width: 24, 
+                          height: 24,
+                        ),
+                         SizedBox(height: 10),
+                         Text(
+                        'Upload speed',
                         style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 5,
+                          color: Colors.black,
+                          fontSize: 15,
                         ),
                       ),
+                       SizedBox(height: 10),
+                      Text(
+                        '11.8 mb/s',
+                        style: TextStyle(
+                          color: Colors.purpleAccent,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                        ],
+                      ),
+                      
                     ],
                   ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 16.0),
+              ],
+            ),
+          ),
+          SizedBox(height: 8.0),
           Container(
-  width: 100,
-  height: 35,
+  width: 90.w,
+  height: 25.h,
   decoration: BoxDecoration(
     color: Colors.white,
   ),
   child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
+   crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        'Connected devices',
+        '  Connected devices',
         style: TextStyle(
-          color: Colors.blue,
+          color: Colors.black,
           fontSize: 20,
         ),
       ),
       Divider(
         color: Colors.grey,
       ),
-          Row(
-  children: [
-    Icon(Icons.phone, color: Colors.red, size: 16),
-    Text('iPhone 6, Disconnect - ', style: TextStyle(color: Colors.red, fontSize: 16)),
-    Icon(Icons.laptop, color: Colors.red, size: 16),
-    Text('Mac Book, Disconnect - ', style: TextStyle(color: Colors.red, fontSize: 16)),
-    Icon(Icons.watch, color: Colors.red, size: 16),
-    Text('iWatch, Disconnect', style: TextStyle(color: Colors.red, fontSize: 16)),
+          Column(
+  children: [ 
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [ Row(
+        children: [
+               Column(
+          children: [
+             Image.asset(
+       'assets/images/cell-phone.png',
+         width: 24, 
+         height: 24,
+          ),
+    Text('Mobile', style: TextStyle(color: Colors.black, fontSize: 10)),
+          ],
+        ),
+       SizedBox(width: 20),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+            Text('iPhone 6', style: TextStyle(color: Colors.black, fontSize: 16)),
+    Text('9518 6253 1223 00XC', style: TextStyle(color: Colors.black, fontSize: 10)),
+        ],
+      ),
+        ],
+      ),
+       
+    Text('Disconnect ', style: TextStyle(color: Colors.red, fontSize: 16)),
+      ],
+    ),
+    SizedBox(height: 10),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Column(
+              children: [
+                Image.asset(
+                 'assets/images/laptop.png',
+                   width: 24, 
+                   height: 24,
+                   ),
+                 Text('laptop', style: TextStyle(color: Colors.black, fontSize: 10)),
+              ],
+            ),
+             SizedBox(width: 20),
+       Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+                Text('Mac Book', style: TextStyle(color: Colors.black, fontSize: 16)),
+    Text('9518 6253 1223 00XC', style: TextStyle(color: Colors.black, fontSize: 10)),
+            ],
+       ),
+          ],
+        ),
+    
+    Text('Disconnect ', style: TextStyle(color: Colors.red, fontSize: 16)),
+      ],
+    ),
+    SizedBox(height: 10),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            Column(
+              children: [
+               Image.asset(
+               'assets/images/apple-watch.png',
+                  width: 24, 
+                   height: 24,
+                    ),
+                    Text('laptop', style: TextStyle(color: Colors.black, fontSize: 10)),
+              ],
+            ),
+             SizedBox(width: 20),
+       Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('iWatch', style: TextStyle(color: Colors.black, fontSize: 16)),
+    Text('9518 6253 1223 00XC', style: TextStyle(color: Colors.black, fontSize: 10)),
+            ],
+       ),
+          ],
+        ),
+    
+    
+    Text('Disconnect ', style: TextStyle(color: Colors.red, fontSize: 16)),
+      ],
+    ),
+
   ],
 )
 
     ],
   ),
-)
+),
 
         ],
       ),

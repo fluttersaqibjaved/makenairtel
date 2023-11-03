@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/verify_email_views.dart';
 import 'package:sizer/sizer.dart';
 
-class RegisterView extends StatelessWidget {
+class RegisterView extends StatefulWidget {
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
