@@ -3,6 +3,7 @@ import 'package:makenairtel/Views/airtel/Recharge_view.dart';
 import 'package:makenairtel/Views/airtel/modem_view.dart';
 import 'package:makenairtel/Views/airtel/profile_view.dart';
 import 'package:makenairtel/Views/airtel/usage..dart';
+import 'package:sizer/sizer.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,8 +39,9 @@ class _AirtelViewState extends State<AirtelView> {
      appBar: AppBar(
         leading:Image.asset(
   'assets/images/Group 192.png',
-  
-  fit: BoxFit.fill,
+  height: 10.h,
+  width: 30.w,
+  fit: BoxFit.fitWidth,
 ),
 
         backgroundColor: Colors.white,

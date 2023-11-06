@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/login_view.dart';
 import 'package:sizer/sizer.dart';
@@ -57,21 +58,29 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      // Handle password reset action here
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 100.w,
-                      height: 5.h,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      child: Text('Send me a password reset link',
-                          style: TextStyle(color: Colors.white)),
-                    ),
-                  ),
+  onPressed: () async {
+    try {
+      final email = _controller.text;
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+    } catch (e) {
+      print('Error sending password reset email: $e');
+    }
+  },
+  child: Container(
+    alignment: Alignment.center,
+    width: 100.w,
+    height: 5.h,
+    decoration: BoxDecoration(
+      color: Colors.blue,
+      borderRadius: BorderRadius.circular(12.0),
+    ),
+    child: Text(
+      'Send me a password reset link',
+      style: TextStyle(color: Colors.white),
+    ),
+  ),
+),
+
                   TextButton(
                     onPressed: () {
                        Navigator.of(context).push(MaterialPageRoute(builder: (context) {

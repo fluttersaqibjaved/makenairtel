@@ -37,7 +37,9 @@ class _UsagedetailView extends State<UsagedetailView> {
           ),
         ],
       ),
-      body: Column(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
+      child:  Column(
         children: [
           Container(
             width: 80.w,
@@ -90,7 +92,7 @@ class _UsagedetailView extends State<UsagedetailView> {
           ),
           SizedBox(height: 8.0),
             Container(
-  width: 100.w,
+  width: 90.w,
   height: 20.h,
     color: Colors.white,
   child: Column(
@@ -104,7 +106,7 @@ class _UsagedetailView extends State<UsagedetailView> {
        Row(
          children: [
            Container(
-            width: 70.w,
+            width: 60.w,
                 height: 10, 
                     color: Colors.yellow,    
            ),
@@ -207,7 +209,7 @@ class _UsagedetailView extends State<UsagedetailView> {
 ),
           SizedBox(height: 8.0),
          Container(
-  width: 100.w,
+  width: 90.w,
   height: 20.h,
   decoration: BoxDecoration(
     color: Colors.white,
@@ -223,7 +225,7 @@ class _UsagedetailView extends State<UsagedetailView> {
        Row(
          children: [
            Container(
-            width: 70.w,
+            width: 60.w,
                 height: 10, 
                     color: Colors.yellow,    
            ),
@@ -326,7 +328,7 @@ class _UsagedetailView extends State<UsagedetailView> {
 ),
           SizedBox(height: 8.0),
      Container(
-  width: 100.w,
+  width: 90.w,
   height: 20.h,
   decoration: BoxDecoration(
     color: Colors.white,
@@ -342,7 +344,7 @@ class _UsagedetailView extends State<UsagedetailView> {
        Row(
          children: [
            Container(
-            width: 70.w,
+            width: 60.w,
                 height: 10, 
                     color: Colors.yellow,    
            ),
@@ -446,6 +448,7 @@ class _UsagedetailView extends State<UsagedetailView> {
 
         ],
       ),
+      )
     );
   }
 }

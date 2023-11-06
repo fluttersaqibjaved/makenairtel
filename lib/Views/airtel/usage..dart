@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/airtel/usage_view..dart';
+import 'package:makenairtel/Views/airtel/usagec_view.dart';
 import 'package:makenairtel/Views/airtel/usagedetail_view.dart';
-import 'package:makenairtel/Views/airtel/usagepage_view.dart';
 
 class Usage extends StatefulWidget {
   @override
@@ -13,8 +13,8 @@ class _UsageState extends State<Usage> {
   Widget build(BuildContext context) {
     return PageView(
       children: [
-        UsagepageView(),
         UsageView(),
+        UsagecView(),
         UsagedetailView(),
       ],
     );

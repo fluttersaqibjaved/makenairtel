@@ -10,6 +10,9 @@ class RechargeView extends StatefulWidget {
 class _RechargeViewState extends State<RechargeView> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      appBar: null,
+      
+    );
   }
 }

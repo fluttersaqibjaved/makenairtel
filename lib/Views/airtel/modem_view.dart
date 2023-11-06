@@ -13,7 +13,10 @@ class _ModemViewState extends State<ModemView> {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: null,
-      body: Column(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
+      child:
+       Column(
         children: [
           SizedBox(height: 10),
           Container( 
@@ -33,7 +36,7 @@ class _ModemViewState extends State<ModemView> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 50.w),
+                SizedBox(width: 30.w),
                 Text(
                   'Change tower',
                   style: TextStyle(
@@ -73,7 +76,7 @@ class _ModemViewState extends State<ModemView> {
                     fontSize: 10,
                   ),
                 ),
-                SizedBox(width: 40.w),
+                SizedBox(width: 20.w),
                  Image.asset(
                           'assets/images/Group 70.png',
                           width: 24, 
@@ -404,6 +407,7 @@ class _ModemViewState extends State<ModemView> {
 
         ],
       ),
+      )
     );
   }
 }
