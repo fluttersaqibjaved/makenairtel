@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:makenairtel/Views/verification_views.dart';
 import 'package:sizer/sizer.dart';
 
@@ -106,29 +105,25 @@ late final TextEditingController _phoneNumber;
                       ),
                       SizedBox(height: 3.h),
                    Container(
-  width: 100.w,
-  height: 7.h,
-  decoration: BoxDecoration(
-    border: Border.all(color: Colors.grey, width: 1.0),
-    borderRadius: BorderRadius.circular(15.0),
-  ),
-  child: IntlPhoneField(
-     controller: _phoneNumber,
-    decoration: InputDecoration(
-      hintText: 'Mobile number',
-      contentPadding: EdgeInsets.symmetric(
-        horizontal: 12.0,
-        vertical: 15.0,
-      ),
-      border: InputBorder.none,
-    ),
-    initialCountryCode: 'PK',
-    onChanged: (phone) {
-    
-      print(phone.completeNumber);
-    },
-  ),
-),
+                        width: 100.w,
+                        height: 7.h,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey, width: 1.0),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: TextField(
+                          enableSuggestions: false,
+                          autocorrect: false,
+                          decoration: InputDecoration(
+                            hintText: 'Mobile number',
+                            contentPadding: EdgeInsets.symmetric(
+                              horizontal: 12.0,
+                              vertical: 10.0,
+                            ),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
 
 
                       SizedBox(height: 8.0),

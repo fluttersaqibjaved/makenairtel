@@ -13,15 +13,25 @@ class _UsagecViewState extends State<UsagecView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
+      
+      body:Stack(
+          children: [
+            Container(
+              width: 100.w,
+              height: 100.h,
+              color: Colors.grey.withOpacity(0.1),
+            ),
+          
+       Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
       child: 
        Column(
         children: [
+          SizedBox(height: 10),
           Container(
             width: 100.w,
             height: 5.h,
-            color: Colors.white,
+            color: Colors.green.withOpacity(0.2),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -85,6 +95,8 @@ class _UsagecViewState extends State<UsagecView> {
   decoration: BoxDecoration(
     color: Colors.white,
   ),
+   child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Center(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,6 +202,7 @@ class _UsagecViewState extends State<UsagecView> {
       ],
     ),
   ),
+   ),
 ),
 
           SizedBox(height: 10.0),
@@ -374,6 +387,8 @@ class _UsagecViewState extends State<UsagecView> {
         ],
       ),
       )
+          ]
+      ),
     );
   }
 }

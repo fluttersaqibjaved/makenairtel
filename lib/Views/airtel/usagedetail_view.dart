@@ -37,16 +37,26 @@ class _UsagedetailView extends State<UsagedetailView> {
           ),
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+      body: Stack(
+          children: [
+            Container(
+              width: 100.w,
+              height: 100.h,
+              color: Colors.grey.withOpacity(0.1),
+            ),
+       Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15.0),
       child:  Column(
         children: [
           Container(
-            width: 80.w,
+            width: 90.w,
             height: 10.h,
             decoration: BoxDecoration(
+               borderRadius: BorderRadius.circular(25),
               color: Colors.white,
             ),
+             child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -70,7 +80,6 @@ class _UsagedetailView extends State<UsagedetailView> {
                                              ),
                          ),
                     ),
-                   
                       Text(
                       'Weekly',
                       style: TextStyle(
@@ -89,12 +98,14 @@ class _UsagedetailView extends State<UsagedetailView> {
                 ),
               ],
             ),
+             ),
           ),
-          SizedBox(height: 8.0),
             Container(
   width: 90.w,
   height: 20.h,
     color: Colors.white,
+     child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -106,12 +117,12 @@ class _UsagedetailView extends State<UsagedetailView> {
        Row(
          children: [
            Container(
-            width: 60.w,
+            width: 55.w,
                 height: 10, 
                     color: Colors.yellow,    
            ),
             Container(
-            width: 30.w,
+            width: 25.w,
                 height: 10, 
                     color: Colors.pink,    
            ),
@@ -130,7 +141,7 @@ class _UsagedetailView extends State<UsagedetailView> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
          Text(
-      ' Total data',
+      'Total data',
       style: TextStyle(
         color: Colors.black,
         fontSize: 20, 
@@ -139,7 +150,7 @@ class _UsagedetailView extends State<UsagedetailView> {
     ),
     SizedBox(height: 10), 
     Text(
-      ' 10.0 GB',
+      '10.0 GB',
       style: TextStyle(
         color: Colors.black,
         fontSize: 20, 
@@ -202,12 +213,10 @@ class _UsagedetailView extends State<UsagedetailView> {
     ),
   ],
 ),
-
-
     ],
   ),
+     ),
 ),
-          SizedBox(height: 8.0),
          Container(
   width: 90.w,
   height: 20.h,
@@ -326,7 +335,6 @@ class _UsagedetailView extends State<UsagedetailView> {
     ],
   ),
 ),
-          SizedBox(height: 8.0),
      Container(
   width: 90.w,
   height: 20.h,
@@ -444,11 +452,11 @@ class _UsagedetailView extends State<UsagedetailView> {
     ],
   ),
 ),
-
-
         ],
       ),
-      )
+      ),
+          ]
+      ),
     );
   }
 }
