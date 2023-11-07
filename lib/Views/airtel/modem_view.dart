@@ -27,6 +27,7 @@ class _ModemViewState extends State<ModemView> {
             child: Column(
               children: [
                 Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                   children: [
                        Text(
                   ' Kalutara',
@@ -36,7 +37,6 @@ class _ModemViewState extends State<ModemView> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(width: 30.w),
                 Text(
                   'Change tower',
                   style: TextStyle(
@@ -68,6 +68,7 @@ class _ModemViewState extends State<ModemView> {
                 ],
               ), 
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                      Text(
                   ' updates every 60mins automaticalyy',
@@ -76,7 +77,6 @@ class _ModemViewState extends State<ModemView> {
                     fontSize: 10,
                   ),
                 ),
-                SizedBox(width: 20.w),
                  Image.asset(
                           'assets/images/Group 70.png',
                           width: 24, 

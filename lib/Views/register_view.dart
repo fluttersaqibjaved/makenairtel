@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:makenairtel/Views/verify_email_views.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:makenairtel/Views/verification_views.dart';
 import 'package:sizer/sizer.dart';
 
 class RegisterView extends StatefulWidget {
@@ -11,13 +12,14 @@ const RegisterView({Key? key}) : super(key: key);
 }
 
 class _RegisterViewState extends State<RegisterView> {
-
+late final TextEditingController _phoneNumber;
   late final TextEditingController _email;
   late final TextEditingController _password;
   String passwordStrength = '';
 
   @override
   void initState() {
+    _phoneNumber = TextEditingController();
     _email = TextEditingController();
     _password = TextEditingController();
     super.initState();
@@ -25,6 +27,7 @@ class _RegisterViewState extends State<RegisterView> {
 
   @override
   void dispose() {
+    _phoneNumber.dispose();
     _email.dispose();
     _password.dispose();
     super.dispose();
@@ -101,27 +104,33 @@ class _RegisterViewState extends State<RegisterView> {
                           fontSize: 14.0,
                         ),
                       ),
-                      SizedBox(height: 30.0),
-                      Container(
-                        width: 100.w,
-                        height: 7.h,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey, width: 1.0),
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: TextField(
-                          enableSuggestions: false,
-                          autocorrect: false,
-                          decoration: InputDecoration(
-                            hintText: 'Mobile number',
-                            contentPadding: EdgeInsets.symmetric(
-                              horizontal: 12.0,
-                              vertical: 10.0,
-                            ),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
+                      SizedBox(height: 3.h),
+                   Container(
+  width: 100.w,
+  height: 7.h,
+  decoration: BoxDecoration(
+    border: Border.all(color: Colors.grey, width: 1.0),
+    borderRadius: BorderRadius.circular(15.0),
+  ),
+  child: IntlPhoneField(
+     controller: _phoneNumber,
+    decoration: InputDecoration(
+      hintText: 'Mobile number',
+      contentPadding: EdgeInsets.symmetric(
+        horizontal: 12.0,
+        vertical: 15.0,
+      ),
+      border: InputBorder.none,
+    ),
+    initialCountryCode: 'PK',
+    onChanged: (phone) {
+    
+      print(phone.completeNumber);
+    },
+  ),
+),
+
+
                       SizedBox(height: 8.0),
                       Container(
                         width: 100.w,
@@ -232,45 +241,53 @@ class _RegisterViewState extends State<RegisterView> {
                       Center(
                         child: Column(
                           children: [
-                             TextButton(
-            onPressed: () async {
-              final email = _email.text;
-              final password = _password.text;
-              try {
-                final userCredential =
-                    await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                  email: email,
-                  password: password,
-                );
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                        return VerifyEmailView();
-                      }));
-                           
+                           TextButton(
+  onPressed: () async {
+    final phoneNumber = _phoneNumber.text;
+    final email = _email.text;
+    final password = _password.text;
+    try {
+      final userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword( 
+        email: email,
+        password: password,
+      );
+    final user = userCredential.user!;
+      await user.updateProfile(displayName: phoneNumber); 
 
-                print(userCredential);
-              } on FirebaseAuthException catch (e) {
-                if (e.code == 'weak-password') {
-                  print('Weak password');
-                } else if (e.code == 'email-already-in-use') {
-                  print('Email is already in use');
-                } else if (e.code == 'invalid-email') {
-                  print('invalid email entered');
-                }
-              }
-            },
-            child: Container(
-                                alignment: Alignment.center,
-                                width: 100.w,
-                                height: 7.h,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  color: Colors.red,
-                                ),
-                                child: Text('SIGN UP',
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 20)),
-                              ),
-          ),
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+        return VerificationView();
+      }));
+      print(userCredential);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        print('Weak password');
+      } else if (e.code == 'email-already-in-use') {
+        print('Email is already in use');
+      } else if (e.code == 'invalid-email') {
+        print('Invalid email entered');
+      } else if (e.code == 'phonenumber-already-in-use') {
+        print('PhoneNumber is already in use');
+      } else if (e.code == 'invalid-phonenumber') {
+        print('Invalid phone number entered');
+      }
+    }
+  },
+  child: Container(
+    alignment: Alignment.center,
+    width: 100.w,
+    height: 7.h,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(15.0),
+      color: Colors.red,
+    ),
+    child: Text('SIGN UP',
+      style: TextStyle(
+        color: Colors.white, fontSize: 20,
+      ),
+    ),
+  ),
+),
+
                           ],
                         ),
                       ),

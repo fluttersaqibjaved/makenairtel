@@ -164,28 +164,28 @@ class _LoginViewState extends State<LoginView> {
 
                       SizedBox(height: 8.0),
                         TextButton(
-            onPressed: () async {
-              final email = _email.text;
-              final password = _password.text;
-              try {
-                final userCredential =
-                    await FirebaseAuth.instance.signInWithEmailAndPassword(
-                  email: email,
-                  password: password,
-                );
-                     Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                        return AirtelView();
-                      }));
-                print(userCredential);
-              } on FirebaseAuthException catch (e) {
-                if (e.code == 'user-not-found') {
-                  print('User not found');
-                } else if (e.code == 'wrong-password') {
-                  print('Wrong password');
-                }
-              }
-            },
-            child: Container(
+                    onPressed: () async {
+                      final email = _email.text;
+                      final password = _password.text;
+                      try {
+                        final userCredential =
+                            await FirebaseAuth.instance.signInWithEmailAndPassword(
+                          email: email,
+                          password: password,
+                        );
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                                return AirtelView();
+                              }));
+                        print(userCredential);
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          print('User not found');
+                        } else if (e.code == 'wrong-password') {
+                          print('Wrong password');
+                        }
+                      }
+                    },
+                         child: Container(
                           alignment: Alignment.center,
                           width: 100.w,
                           height: 7.h,

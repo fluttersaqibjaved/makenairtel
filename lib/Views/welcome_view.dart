@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/login_view.dart';
-import 'package:makenairtel/Views/register_view.dart';
+import 'package:makenairtel/Views/mobilenumber_view.dart';
 import 'package:sizer/sizer.dart';
 
 class WelcomeView extends StatefulWidget {
@@ -60,7 +60,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => RegisterView(),
+                              builder: (context) => MobileNumberView(),
                             ),
                           );
                         },

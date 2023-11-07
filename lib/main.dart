@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:makenairtel/Views/airtel/airtel_view.dart';
-import 'package:makenairtel/Views/verify_email_views.dart';
 import 'package:makenairtel/Views/welcome_view.dart';
 import 'package:makenairtel/firebase_options.dart';
 import 'package:sizer/sizer.dart';
@@ -51,7 +50,7 @@ if (user != null) {
   if (user.emailVerified) {
     return AirtelView(); 
   } else {
-    return VerifyEmailView(); 
+    return WelcomeView(); 
   }
 } else {
   return WelcomeView(); 
