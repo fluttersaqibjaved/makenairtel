@@ -33,34 +33,46 @@ class _AirtelViewState extends State<AirtelView> {
     ProfileView(),
   ];
 
+  bool shouldShowAppBar(int index) {
+    return index != 0;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
-        leading:Image.asset(
-  'assets/images/Group 192.png',
-  height: 10.h,
-  width: 30.w,
-  fit: BoxFit.fitWidth,
-),
-
-        backgroundColor: Colors.white,
-        actions: <Widget>[
-          IconButton(
-            icon: Image.asset('assets/images/Group 38.png'),
-            onPressed: () {
-              print('Notification button pressed');
-            },
-          ),
-        ],
-        
-      ),
+      appBar: shouldShowAppBar(_currentIndex)
+          ? AppBar(
+              leading: Image.asset(
+                'assets/images/Group 192.png',
+                height: 10.h,
+                width: 30.w,
+                fit: BoxFit.fitWidth,
+              ),
+              backgroundColor: Colors.white,
+              actions: <Widget>[
+                IconButton(
+                  icon: Image.asset('assets/images/Group 38.png'),
+                  onPressed: () {
+                    print('Notification button pressed');
+                  },
+                ),
+              ],
+            )
+          : null,
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red, 
+        selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
+        selectedFontSize: 15,
+        unselectedFontSize: 15,
+        selectedLabelStyle: TextStyle(
+        fontWeight: FontWeight.bold, 
+      ),
+      unselectedLabelStyle: TextStyle(
+        fontWeight: FontWeight.bold, 
+      ),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.data_usage),
@@ -88,17 +100,3 @@ class _AirtelViewState extends State<AirtelView> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

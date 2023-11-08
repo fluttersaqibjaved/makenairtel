@@ -15,7 +15,14 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body: Padding(
+      body: Stack(
+          children: [
+            Container(
+              width: 100.w,
+              height: 100.h,
+              color: Colors.grey.withOpacity(0.1),
+            ),
+       Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: Column(
         children: [
@@ -23,54 +30,72 @@ class _ProfileViewState extends State<ProfileView> {
           
           Container(
             width: 90.w,
-            height: 17.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+            height: 20.h,
+             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '  Subscriber ID',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    Text(
-                      '  1598 2364 8564 2456 159',
+                    Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child:
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Subscriber ID',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                         Text(
+                      '1598 2364 8564 2456 159',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ],
-                ),
+                      ],
+                    ),
+                    ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 15),
                   child: Divider(
                     color: Colors.grey,
                   ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '  Upcoming billing date',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 15,
-                      ),
-                    ),
-                    Row(
+                     Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child:
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Upcoming billing date',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15,
+                          ),
+                        ),
+                            Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '  5 Nov, 2018',
+                          '5 Nov, 2018',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 15,
@@ -81,23 +106,38 @@ class _ProfileViewState extends State<ProfileView> {
                           'more details >> ',
                           style: TextStyle(
                             color: Colors.red,
-                            fontSize: 20,
+                            fontSize: 15,
                           ),
                         ),
                       ],
                     ),
-                  ],
-                ),
+                      ],
+                    ),
+                     ),
+                  
+              
               ],
+            ),
             ),
           ),
           SizedBox(height: 16.0),
           Container(
             width: 90.w,
             height: 8.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,7 +159,7 @@ class _ProfileViewState extends State<ProfileView> {
                     ],
                   ),
                   Text(
-                    '>  ',
+                    '>',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 30,
@@ -128,14 +168,26 @@ class _ProfileViewState extends State<ProfileView> {
                 ],
               ),
             ),
+            ),
           ),
           SizedBox(height: 8.0),
           Container(
             width: 90.w,
             height: 8.h,
             decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -157,7 +209,7 @@ class _ProfileViewState extends State<ProfileView> {
                     ],
                   ),
                   Text(
-                    '>  ',
+                    '>',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 30,
@@ -166,14 +218,26 @@ class _ProfileViewState extends State<ProfileView> {
                 ],
               ),
             ),
+            ),
           ),
           SizedBox(height: 8.0),
           Container(
             width: 90.w,
             height: 8.h,
             decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -196,7 +260,7 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                   SizedBox(width: 20),
                   Text(
-                    '>  ',
+                    '>',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 30,
@@ -205,14 +269,26 @@ class _ProfileViewState extends State<ProfileView> {
                 ],
               ),
             ),
+            ),
           ),
           SizedBox(height: 8.0),
           Container(
             width: 90.w,
             height: 8.h,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -234,7 +310,7 @@ class _ProfileViewState extends State<ProfileView> {
                     ],
                   ),
                   Text(
-                    '>  ',
+                    '>',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 30,
@@ -243,14 +319,26 @@ class _ProfileViewState extends State<ProfileView> {
                 ],
               ),
             ),
+            ),
           ),
           SizedBox(height: 8.0),
           Container(
             width: 90.w,
             height: 8.h,
             decoration: BoxDecoration(
-              color: Colors.white,
-            ),
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -288,7 +376,7 @@ class _ProfileViewState extends State<ProfileView> {
                     ],
                   ),
                   Text(
-                    '>  ',
+                    '>',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 30,
@@ -297,9 +385,12 @@ class _ProfileViewState extends State<ProfileView> {
                 ],
               ),
             ),
+            ),
           ),
         ],
       ),
+      ),
+          ]
       ),
     );
   }

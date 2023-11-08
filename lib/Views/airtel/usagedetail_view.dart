@@ -32,7 +32,6 @@ class _UsagedetailView extends State<UsagedetailView> {
               color: Colors.black, 
             ),
             onPressed: () {
-              
             },
           ),
         ],
@@ -44,169 +43,195 @@ class _UsagedetailView extends State<UsagedetailView> {
               height: 100.h,
               color: Colors.grey.withOpacity(0.1),
             ),
-       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15.0),
+           Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
       child:  Column(
-        children: [
-          Container(
-            width: 90.w,
-            height: 10.h,
-            decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(25),
-              color: Colors.white,
-            ),
-             child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: 30.w,
-                      height: 7.h,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                      color: Colors.red,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(height: 1.h),
+              Container(
+                width: 100.w,
+                height: 8.h,
+                decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+                 child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: 
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          width: 30.w,
+                          height: 7.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25),
+                          color: Colors.red,
+                        ),
+                             child: Center(
+                               child: Text(
+                                  'Daily',
+                                    style: TextStyle(
+                                       color: Colors.white,
+                                       fontSize: 20,
+                                       fontWeight: FontWeight.bold,
+                                          ),
+                                         ),
+                             ),
+                        ),
+                          Text(
+                          'Weekly',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 20, 
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                          Text(
+                          'Monthly',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 20, 
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ],
                     ),
-                         child: Center(
-                           child: Text(
-                                               'Daily',
-                                               style: TextStyle(
-                                                 color: Colors.white,
-                                                 fontSize: 20, 
-                                               ),
-                                             ),
-                         ),
-                    ),
-                      Text(
-                      'Weekly',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 20, 
-                      ),
-                    ),
-                      Text(
-                      'Monthly',
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 20, 
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-             ),
-          ),
-            Container(
-  width: 90.w,
+                 ),
+              ),
+                Container(
+  width: 100.w,
   height: 20.h,
-    color: Colors.white,
+   decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        'Mon, Nov 4 - 2019',
-        style: TextStyle(fontSize: 20),
-      ),
-      SizedBox(height: 10),
-       Row(
-         children: [
-           Container(
-            width: 55.w,
-                height: 10, 
-                    color: Colors.yellow,    
-           ),
-            Container(
-            width: 25.w,
-                height: 10, 
-                    color: Colors.pink,    
-           ),
-         ],
-       ),
-      Padding(
+        Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
+                  child:
+      Text(
+            'Mon, Nov 4 - 2019',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      ),
+        ),
+      SizedBox(height: 10),
+           Row(
+             children: [
+               Container(
+                width: 60.w,
+                    height: 10, 
+                        color: Colors.yellow,    
+               ),
+                Container(
+                width: 23.w,
+                    height: 10, 
+                       color: Colors.pinkAccent,     
+               ),
+             ],
+           ),
+      Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
+             Text(
       'Total data',
       style: TextStyle(
-        color: Colors.black,
-        fontSize: 20, 
-        
+            color: Colors.black,
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
     SizedBox(height: 10), 
     Text(
       '10.0 GB',
       style: TextStyle(
-        color: Colors.black,
-        fontSize: 20, 
-         fontWeight: FontWeight.bold,
+            color: Colors.black,
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
    Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.center, 
       children: [
-         Text(
+             Text(
       'Usage data',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20, 
+            color: Colors.yellow,
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
       '7.5 GB',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20,
-         fontWeight: FontWeight.bold, 
+            color: Colors.yellow,
+            fontSize: 15,
+             fontWeight: FontWeight.bold, 
       ),
     ),
       ],
     ),
    Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.end, 
       children: [
-       Text(
-      'Free data ',
+           Text(
+      'Free data',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
+            color: Colors.pinkAccent,  
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
-      '2.5 GB ',
+      '2.5 GB',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
-         fontWeight: FontWeight.bold,
+           color: Colors.pinkAccent,  
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
@@ -217,246 +242,283 @@ class _UsagedetailView extends State<UsagedetailView> {
   ),
      ),
 ),
-         Container(
-  width: 90.w,
+             Container(
+  width: 100.w,
   height: 20.h,
   decoration: BoxDecoration(
-    color: Colors.white,
-  ),
+              borderRadius: BorderRadius.circular(10),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+  child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Column(
      crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        'Mon, Nov 3 - 2019',
-        style: TextStyle(fontSize: 20),
-      ),
-      SizedBox(height: 10),
-       Row(
-         children: [
-           Container(
-            width: 60.w,
-                height: 10, 
-                    color: Colors.yellow,    
-           ),
-            Container(
-            width: 30.w,
-                height: 10, 
-                    color: Colors.pink,    
-           ),
-         ],
-       ),
-      Padding(
+       Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
+                  child:
+      Text(
+            'Mon, Nov 3 - 2019',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+      ),
+       ),
+      SizedBox(height: 10),
+           Row(
+             children: [
+               Container(
+                width: 60.w,
+                    height: 10, 
+                        color: Colors.yellow,    
+               ),
+                Container(
+                width: 23.w,
+                    height: 10, 
+                       color: Colors.pinkAccent,      
+               ),
+             ],
+           ),
+      Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
-      ' Total data',
+             Text(
+      'Total data',
       style: TextStyle(
-         color: Colors.black,
-        fontSize: 20, 
+             color: Colors.black,
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
-      ' 10.0 GB',
+      '10.0 GB',
       style: TextStyle(
-        color: Colors.black,
-        fontSize: 20, 
-         fontWeight: FontWeight.bold,
+            color: Colors.black,
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
    Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.center, 
       children: [
-         Text(
+             Text(
       'Usage data',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20,
-
+            color: Colors.yellow,
+            fontSize: 15,
+              fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
       '7.5 GB',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20,
-        fontWeight: FontWeight.bold
+            color: Colors.yellow,
+            fontSize: 15,
+            fontWeight: FontWeight.bold
       ),
     ),
       ],
     ),
    Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.end, 
       children: [
-       Text(
-      'Free data ',
+           Text(
+      'Free data',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
+           color: Colors.pinkAccent,  
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
-      '2.5 GB ',
+      '2.5 GB',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
-         fontWeight: FontWeight.bold,
+            color: Colors.pinkAccent,  
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
   ],
 ),
-
-
     ],
+  ),
   ),
 ),
      Container(
-  width: 90.w,
+  width: 100.w,
   height: 20.h,
   decoration: BoxDecoration(
-    color: Colors.white,
-  ),
+              borderRadius: BorderRadius.circular(10),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+  child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        'Mon, Nov 2 - 2019',
-        style: TextStyle(fontSize: 20),
-      ),
-    SizedBox(height: 10),
-       Row(
-         children: [
-           Container(
-            width: 60.w,
-                height: 10, 
-                    color: Colors.yellow,    
-           ),
-            Container(
-            width: 30.w,
-                height: 10, 
-                    color: Colors.pink,    
-           ),
-         ],
-       ),
-      Padding(
+       Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: Divider(
-                    color: Colors.grey,
-                  ),
-                ),
+                  child:
+      Text(
+            'Mon, Nov 2 - 2019',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold
+              ),
+      ),
+       ),
+    SizedBox(height: 10),
+           Row(
+             children: [
+               Container(
+                width: 60.w,
+                    height: 10, 
+                        color: Colors.yellow,    
+               ),
+                Container(
+                width: 23.w,
+                    height: 10, 
+                        color: Colors.pinkAccent,    
+               ),
+             ],
+           ),
+      Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Divider(
+                        color: Colors.grey,
+                      ),
+                    ),
    Row(
   mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
     Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
-      ' Total data',
+             Text(
+      'Total data',
       style: TextStyle(
-        color: Colors.black,
-        fontSize: 20, 
+            color: Colors.black,
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
-      ' 10.0 GB',
+      '10.0 GB',
       style: TextStyle(
-         color: Colors.black,
-        fontSize: 20, 
-         fontWeight: FontWeight.bold,
+             color: Colors.black,
+            fontSize: 15, 
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
      Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.center, 
       children: [
-         Text(
+             Text(
       'Usage data',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20, 
+            color: Colors.yellow,
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
       '7.5 GB',
       style: TextStyle(
-        color: Colors.yellow,
-        fontSize: 20,
-         fontWeight: FontWeight.bold,
+            color: Colors.yellow,
+            fontSize: 15,
+             fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
    Container(
-            width: 1,
-                height: 10.h, 
-                    color: Colors.grey.withOpacity(0.3),    
-           ),
+                width: 1,
+                    height: 10.h, 
+                        color: Colors.grey.withOpacity(0.3),    
+               ),
     Column(
       crossAxisAlignment: CrossAxisAlignment.end, 
       children: [
-       Text(
-      'Free data ',
+           Text(
+      'Free data',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
+            color: Colors.pinkAccent,  
+            fontSize: 15, 
+            fontWeight: FontWeight.bold, 
       ),
     ),
     SizedBox(height: 10), 
     Text(
-      '2.5 GB ',
+      '2.5 GB',
       style: TextStyle(
-        color: Colors.purple,
-        fontSize: 20, 
-        fontWeight: FontWeight.bold,
+           color: Colors.pinkAccent, 
+            fontSize: 15, 
+            fontWeight: FontWeight.bold,
       ),
     ),
       ],
     ),
   ],
 ),
-
-
     ],
   ),
+  ),
 ),
-        ],
+SizedBox(height: 1.h),
+            ],
       ),
       ),
-          ]
-      ),
+         ],
+       ),
     );
   }
 }

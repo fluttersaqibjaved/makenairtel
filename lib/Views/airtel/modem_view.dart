@@ -13,23 +13,45 @@ class _ModemViewState extends State<ModemView> {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: null,
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+      body: Stack(
+          children: [
+            Container(
+              width: 100.w,
+              height: 100.h,
+              color: Colors.grey.withOpacity(0.1),
+            ),
+       Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
       child:
        Column(
         children: [
           SizedBox(height: 10),
           Container( 
-            width: 90.w,
+            width: 100.w,
             height: 50.h,
-          color: Colors.white,
-          
+           decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5),  
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+          child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Column(
               children: [
+                 Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                      child:
                 Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                   children: [
-                       Text(
+                     Text(
                   ' Kalutara',
                   style: TextStyle(
                     color: Colors.black,
@@ -47,6 +69,7 @@ class _ModemViewState extends State<ModemView> {
                 ),
                   ],
                 ),
+          ),
                 SizedBox(height: 30),
               Row(
                 children: [
@@ -286,23 +309,38 @@ class _ModemViewState extends State<ModemView> {
               ],
             ),
           ),
+          ),
           SizedBox(height: 8.0),
           Container(
-  width: 90.w,
+  width: 100.w,
   height: 25.h,
   decoration: BoxDecoration(
-    color: Colors.white,
-  ),
+              borderRadius: BorderRadius.circular(15),
+  color: Colors.white,
+  boxShadow: [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.5), 
+      spreadRadius: 2,  
+      blurRadius: 3,  
+      offset: Offset(0, 2),  
+    ),
+  ],
+),
+  child:Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
   child: Column(
    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
-        '  Connected devices',
+        Padding(
+                  padding: const EdgeInsets.only(top: 10),
+      child:Text(
+        'Connected devices',
         style: TextStyle(
           color: Colors.black,
           fontSize: 20,
         ),
       ),
+       ),
       Divider(
         color: Colors.grey,
       ),
@@ -403,11 +441,13 @@ class _ModemViewState extends State<ModemView> {
 
     ],
   ),
+  ),
 ),
-
         ],
       ),
       )
+          ]
+      ),
     );
   }
 }

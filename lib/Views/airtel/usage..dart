@@ -11,22 +11,16 @@ class Usage extends StatefulWidget {
 class _UsageState extends State<Usage> {
   @override
   Widget build(BuildContext context) {
-    return PageView(
+    return Scaffold(
+      appBar: null,
+      body: PageView(
       children: [
         UsageView(),
         UsagecView(),
         UsagedetailView(),
       ],
+    ),
     );
+    
   }
 }
-
-
-
-
-
-
-
-
-
-
