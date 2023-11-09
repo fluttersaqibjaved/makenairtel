@@ -73,7 +73,7 @@ class _UsagecViewState extends State<UsagecView> {
     ),
     children: <InlineSpan>[
       WidgetSpan(
-        child: SizedBox(width: 5), // Add a 10-pixel wide space
+        child: SizedBox(width: 5), 
       ),
       TextSpan(
         text: 'Good',
@@ -84,7 +84,7 @@ class _UsagecViewState extends State<UsagecView> {
         ),
       ),
       WidgetSpan(
-        child: SizedBox(width: 5), // Add another 10-pixel wide space
+        child: SizedBox(width: 5),
       ),
       TextSpan(
         text: 'now !',
@@ -143,13 +143,13 @@ class _UsagecViewState extends State<UsagecView> {
                             ),
                           ),
                           Padding(
-  padding: EdgeInsets.only(bottom: 30.0), // Adjust the value as needed
+  padding: EdgeInsets.only(bottom: 30.0), 
   child:
                           Text(
                             'Tap to view detailed usage details >>',
                             style: TextStyle(
                               fontSize: 15,
-                              // fontWeight: FontWeight.bold,
+                            
                               color: const Color.fromARGB(255, 235, 25, 10),
                             ),
                           ),
@@ -203,13 +203,10 @@ class _UsagecViewState extends State<UsagecView> {
             ),
          ),
          SizedBox(height: 1.h),
-           Container(
-            width: 150.w,  // Adjust the width as needed
-            child: Divider(
-              color: Colors.grey.withOpacity(0.3),
-              thickness: 1,
+            Divider(           
+                  color: Colors.grey.withOpacity(0.3),
+                  thickness: 1,
             ),
-          ),
             Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -355,7 +352,7 @@ class _UsagecViewState extends State<UsagecView> {
                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                          Padding(
-              padding: EdgeInsets.only(left: 3.w), // Add left padding
+              padding: EdgeInsets.only(left: 3.w), 
               child:
                          Container(
   width: 50.w,
@@ -368,7 +365,7 @@ class _UsagecViewState extends State<UsagecView> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 2.w), // Add left padding to the icon
+            padding: EdgeInsets.only(left: 2.w), 
             child: Icon(
               Icons.brightness_1,
               size: 9, // Icon size
@@ -376,11 +373,11 @@ class _UsagecViewState extends State<UsagecView> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 2.w), // Add left padding to the text
+            padding: EdgeInsets.only(left: 2.w), 
             child: Text(
               '10 Gb data per day',
               style: TextStyle(
-                fontSize: 9.sp, // Text font size
+                fontSize: 9.sp, 
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
@@ -393,19 +390,19 @@ class _UsagecViewState extends State<UsagecView> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 2.w), // Add left padding to the icon
+            padding: EdgeInsets.only(left: 2.w), 
             child: Icon(
               Icons.brightness_1,
-              size: 9, // Icon size
+              size: 9, 
               color: Colors.white,
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 2.w), // Add left padding to the text
+            padding: EdgeInsets.only(left: 2.w), 
             child: Text(
               '12 Pm - 2 Pm unlimited data',
               style: TextStyle(
-                fontSize: 9.sp, // Text font size
+                fontSize: 9.sp, 
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
