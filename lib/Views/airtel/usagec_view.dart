@@ -45,7 +45,7 @@ class _UsagecViewState extends State<UsagecView> {
             Container(
               width: 100.w,
               height: 100.h,
-              color: Colors.grey.withOpacity(0.1),
+              color: Color(0xFFF4F8FB),
             ),
           
        Column(
@@ -58,18 +58,8 @@ class _UsagecViewState extends State<UsagecView> {
                 width: 100.w,
                 height: 5.h,
                decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-  color: Colors.green.withOpacity(0.3),
-  boxShadow: [
-    BoxShadow(
-      color: Colors.grey.withOpacity(0.1), 
-      spreadRadius: 2,  
-      blurRadius: 3,  
-      offset: Offset(0, 2),  
-    ),
-  ],
-),
-                
+             color: Colors.green.withOpacity(0.2),
+),  
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -125,7 +115,7 @@ class _UsagecViewState extends State<UsagecView> {
   color: Colors.white,
   boxShadow: [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.5), 
+      color: Colors.black.withOpacity(0.1), 
       spreadRadius: 2,  
       blurRadius: 3,  
       offset: Offset(0, 2),  
@@ -158,7 +148,7 @@ class _UsagecViewState extends State<UsagecView> {
                           Text(
                             'Tap to view detailed usage details >>',
                             style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 15,
                               // fontWeight: FontWeight.bold,
                               color: const Color.fromARGB(255, 235, 25, 10),
                             ),
@@ -178,7 +168,7 @@ class _UsagecViewState extends State<UsagecView> {
   color: Colors.white,
   boxShadow: [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.5), 
+      color: Colors.black.withOpacity(0.1), 
       spreadRadius: 2,  
       blurRadius: 3,  
       offset: Offset(0, 2),  
@@ -195,7 +185,7 @@ class _UsagecViewState extends State<UsagecView> {
                       padding: const EdgeInsets.only(top: 20),
                       child:
             Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Thursday, Oct 31 - 5:34 PM',
@@ -204,6 +194,7 @@ class _UsagecViewState extends State<UsagecView> {
                         color: Colors.black,
                       ),
                     ),
+                    SizedBox(width: 22.w),
                     Icon(
                       Icons.payment,
                       color: Colors.red,
@@ -212,15 +203,18 @@ class _UsagecViewState extends State<UsagecView> {
             ),
          ),
          SizedBox(height: 1.h),
-            Divider(           
-                  color: Colors.grey.withOpacity(0.3),
-                  thickness: 1,
+           Container(
+            width: 150.w,  // Adjust the width as needed
+            child: Divider(
+              color: Colors.grey.withOpacity(0.3),
+              thickness: 1,
             ),
+          ),
             Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           'Total Data',
@@ -281,9 +275,11 @@ class _UsagecViewState extends State<UsagecView> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Center(
+                         child:  Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            
                             Text(
                               'Available data',
                               style: TextStyle(
@@ -303,6 +299,8 @@ class _UsagecViewState extends State<UsagecView> {
                             ),
                           ],
                         ),
+                        ),
+                       
                       ],
                     ),
                   ],
@@ -322,7 +320,7 @@ class _UsagecViewState extends State<UsagecView> {
   color: Colors.red,
   boxShadow: [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.5), 
+      color: Colors.black.withOpacity(0.1), 
       spreadRadius: 2,  
       blurRadius: 3,  
       offset: Offset(0, 2),  
@@ -493,7 +491,7 @@ class _UsagecViewState extends State<UsagecView> {
   color: Colors.white,
   boxShadow: [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.5), 
+      color: Colors.black.withOpacity(0.1), 
       spreadRadius: 2,  
       blurRadius: 3,  
       offset: Offset(0, 2),  
@@ -549,6 +547,7 @@ class _UsagecViewState extends State<UsagecView> {
                 ],
                 ),
           ),
+          SizedBox(height: 3.h),
                 ],
               ),
                  ), 

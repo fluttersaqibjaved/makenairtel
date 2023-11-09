@@ -50,7 +50,7 @@ class _UsagedetailView extends State<UsagedetailView> {
             Container(
               width: 100.w,
               height: 100.h,
-              color: Colors.grey.withOpacity(0.1),
+              color: Color(0xFFF4F8FB),
             ),
            Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -66,7 +66,7 @@ class _UsagedetailView extends State<UsagedetailView> {
   color: Colors.white,
   boxShadow: [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.5), 
+      color: Colors.black.withOpacity(0.1), 
       spreadRadius: 2,  
       blurRadius: 3,  
       offset: Offset(0, 2),  
@@ -127,7 +127,7 @@ class _UsagedetailView extends State<UsagedetailView> {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5), 
+                      color: Colors.black.withOpacity(0.1),
                       spreadRadius: 2,  
                       blurRadius: 3,  
                       offset: Offset(0, 2),  
@@ -262,7 +262,7 @@ class _UsagedetailView extends State<UsagedetailView> {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5), 
+                color: Colors.black.withOpacity(0.1),
                 spreadRadius: 2,  
                 blurRadius: 3,  
                 offset: Offset(0, 2),  
@@ -397,7 +397,7 @@ class _UsagedetailView extends State<UsagedetailView> {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5), 
+               color: Colors.black.withOpacity(0.1),
                 spreadRadius: 2,  
                 blurRadius: 3,  
                 offset: Offset(0, 2),  
@@ -523,6 +523,7 @@ class _UsagedetailView extends State<UsagedetailView> {
             ),
             ),
           ),
+           SizedBox(height: 5.h),
             ],
       ),
       ),
