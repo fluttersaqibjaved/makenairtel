@@ -20,12 +20,12 @@ class _ModemViewState extends State<ModemView> {
               height: 100.h,
               color: Colors.grey.withOpacity(0.1),
             ),
-       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child:
        Column(
         children: [
-          SizedBox(height: 10),
+          SizedBox(height: 2.h),
+          Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+      child:
           Container( 
             width: 100.w,
             height: 50.h,
@@ -110,7 +110,7 @@ class _ModemViewState extends State<ModemView> {
                 Divider(
                   color: Colors.grey,
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 1.h),
                  Row(
             children: [
               Expanded(
@@ -154,12 +154,11 @@ class _ModemViewState extends State<ModemView> {
                       ),
                         ],
                       ),
-                     
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 8.0),
+              SizedBox(width: 2.w),
               Expanded(
                 child: Container(
                   width: 15.w,
@@ -201,14 +200,13 @@ class _ModemViewState extends State<ModemView> {
                       ),
                         ],
                       ),
-                      
                     ],
                   ),
                 ),
               ),
             ],
           ),
-          SizedBox(height: 8.0),
+         SizedBox(height: 2.h),
            Row(
             children: [
               Expanded(
@@ -257,7 +255,7 @@ class _ModemViewState extends State<ModemView> {
                   ),
                 ),
               ),
-              SizedBox(width: 8.0),
+              SizedBox(width: 2.w),
               Expanded(
                 child: Container(
                   width: 15.w,
@@ -310,7 +308,8 @@ class _ModemViewState extends State<ModemView> {
             ),
           ),
           ),
-          SizedBox(height: 8.0),
+          ),
+          SizedBox(height: 3.h),
           Container(
   width: 100.w,
   height: 25.h,
@@ -445,7 +444,7 @@ class _ModemViewState extends State<ModemView> {
 ),
         ],
       ),
-      )
+      
           ]
       ),
     );

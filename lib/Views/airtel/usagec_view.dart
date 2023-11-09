@@ -13,23 +13,32 @@ class _UsagecViewState extends State<UsagecView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-              leading: Image.asset(
-                'assets/images/Group 192.png',
-                height: 10.h,
-                width: 30.w,
-                fit: BoxFit.fitWidth,
-              ),
-              backgroundColor: Colors.white,
-              actions: <Widget>[
-                IconButton(
-                  icon: Image.asset('assets/images/Group 38.png'),
-                  onPressed: () {
-                    print('Notification button pressed');
-                  },
-                ),
-              ],
-            ),
-      
+  leading: Padding(
+    padding: EdgeInsets.only(left: 20.0),
+    child: FractionallySizedBox(
+      widthFactor: 3.0, 
+      heightFactor: 3.0,
+      alignment: Alignment.centerLeft,
+      child: Image.asset(
+        'assets/images/Group 192.png',
+        fit: BoxFit.fitWidth,
+      ),
+    ),
+  ),
+  backgroundColor: Colors.white,
+  actions: <Widget>[
+   Padding(
+     padding: EdgeInsets.only(right: 10.0), 
+      child: IconButton(
+        icon: Image.asset('assets/images/Group 38.png'),
+        onPressed: () {
+          print('Notification button pressed');
+        },
+      ),
+    ),
+  ],
+),
+
       body: SingleChildScrollView(
         child: Stack(
           children: [
@@ -42,12 +51,9 @@ class _UsagecViewState extends State<UsagecView> {
        Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
          children: [
-      //      Padding(
-      //       padding: EdgeInsets.symmetric(horizontal: 10.0),
-      // child: 
            Column(
             children: [
-              SizedBox(height: 10),
+              SizedBox(height: 3.h),
               Container(
                 width: 100.w,
                 height: 5.h,
@@ -67,27 +73,48 @@ class _UsagecViewState extends State<UsagecView> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    RichText(
-                      text: TextSpan(
-                        text: 'Your internet speed is ',
-                        style: DefaultTextStyle.of(context).style,
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: 'Good',
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          TextSpan(text: ' now !'),
-                        ],
-                      ),
-                    ),
+                   RichText(
+  text: TextSpan(
+    text: 'Your internet speed is',
+    style: TextStyle(
+      color: Colors.black,
+      fontSize: 16.0,
+      
+    ),
+    children: <InlineSpan>[
+      WidgetSpan(
+        child: SizedBox(width: 5), // Add a 10-pixel wide space
+      ),
+      TextSpan(
+        text: 'Good',
+        style: TextStyle(
+          color: Colors.green,
+          fontSize: 16.0,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      WidgetSpan(
+        child: SizedBox(width: 5), // Add another 10-pixel wide space
+      ),
+      TextSpan(
+        text: 'now !',
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 16.0,
+          
+        ),
+      ),
+    ],
+  ),
+),
+
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 3.h),
+                 Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0),
+      child: 
               Column(
                 children: [
                   Container(
@@ -126,13 +153,13 @@ class _UsagecViewState extends State<UsagecView> {
                             ),
                           ),
                           Padding(
-  padding: EdgeInsets.only(bottom: 20.0), // Adjust the value as needed
+  padding: EdgeInsets.only(bottom: 30.0), // Adjust the value as needed
   child:
                           Text(
                             'Tap to view detailed usage details >>',
                             style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                              // fontWeight: FontWeight.bold,
                               color: const Color.fromARGB(255, 235, 25, 10),
                             ),
                           ),
@@ -142,7 +169,7 @@ class _UsagecViewState extends State<UsagecView> {
                      ),
                     ),
                   ),
-                  SizedBox(height: 8.0),
+                  SizedBox(height: 3.h),
                   Container(
   width: 100.w,
   height: 20.h,
@@ -165,7 +192,7 @@ class _UsagecViewState extends State<UsagecView> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
          Padding(
-                      padding: const EdgeInsets.only(top: 10),
+                      padding: const EdgeInsets.only(top: 20),
                       child:
             Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -175,7 +202,6 @@ class _UsagecViewState extends State<UsagecView> {
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.black,
-                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Icon(
@@ -185,6 +211,7 @@ class _UsagecViewState extends State<UsagecView> {
                   ],
             ),
          ),
+         SizedBox(height: 1.h),
             Divider(           
                   color: Colors.grey.withOpacity(0.3),
                   thickness: 1,
@@ -203,10 +230,11 @@ class _UsagecViewState extends State<UsagecView> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+                        SizedBox(height: 1.h),
                         Text(
                           '10.0 GB',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 20,
                             color: Colors.red,
                             fontWeight: FontWeight.bold,
                           ),
@@ -215,53 +243,65 @@ class _UsagecViewState extends State<UsagecView> {
                     ),
                    Container(
                     width: 1,
-                        height: 7.h, 
+                        height: 11.h, 
                             color: Colors.grey.withOpacity(0.3),    
                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
-                          'Data used',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          '7.5 GB',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Data used',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 1.h),
+                            Text(
+                              '7.5 GB',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                    Container(
                     width: 1,
-                        height: 7.h, 
+                        height: 11.h, 
                             color: Colors.grey.withOpacity(0.3),    
                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          'Available data',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          '2.5 GB',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Available data',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 1.h),
+                            Text(
+                              '2.5 GB',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -273,7 +313,7 @@ class _UsagecViewState extends State<UsagecView> {
    ),
 ),
 
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 3.h),
             Container(
   width: 100.w,
   height: 20.h,
@@ -316,37 +356,70 @@ class _UsagecViewState extends State<UsagecView> {
                                     Column(
                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                            Container(
-                              width: 50.w, 
-                              height: 10.h, 
-                              color: Colors.white.withOpacity(0.1),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        '10 Gb data per day',
-                                        style: TextStyle(
-                                          fontSize: 10.sp, 
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                      Text(
-                                        '12 Pm - 2 Pm unlimited data',
-                                        style: TextStyle(
-                                          fontSize: 10.sp, 
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
+                         Padding(
+              padding: EdgeInsets.only(left: 3.w), // Add left padding
+              child:
+                         Container(
+  width: 50.w,
+  height: 10.h,
+  color: Colors.white.withOpacity(0.1),
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 2.w), // Add left padding to the icon
+            child: Icon(
+              Icons.brightness_1,
+              size: 9, // Icon size
+              color: Colors.white,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 2.w), // Add left padding to the text
+            child: Text(
+              '10 Gb data per day',
+              style: TextStyle(
+                fontSize: 9.sp, // Text font size
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      ),
+      SizedBox(height: 1.h),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 2.w), // Add left padding to the icon
+            child: Icon(
+              Icons.brightness_1,
+              size: 9, // Icon size
+              color: Colors.white,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 2.w), // Add left padding to the text
+            child: Text(
+              '12 Pm - 2 Pm unlimited data',
+              style: TextStyle(
+                fontSize: 9.sp, // Text font size
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ],
+      ),
+    ],
+  ),
+),
+
+                         ),
                       ],
                     ),
                               ],
@@ -358,7 +431,7 @@ class _UsagecViewState extends State<UsagecView> {
                             height: 20.h, 
                                 color: Colors.grey,   
                    ),
-                    SizedBox(width: 10),
+                    SizedBox(width: 3.w),
                             Column(
                        children: [
                           Image.asset(
@@ -370,14 +443,14 @@ class _UsagecViewState extends State<UsagecView> {
                          Text(
                              '25+ surprising plans',
                                style: TextStyle(
-                                fontSize: 10.sp, 
+                                fontSize: 8.sp, 
                                color: Colors.white, 
                                fontWeight: FontWeight.bold,
                             ),
                              ),
                              SizedBox(height: 10),
                          Container(
-                              width: 30.w, 
+                              width: 25.w, 
                               height: 5.h, 
                               decoration: BoxDecoration(
                                borderRadius: BorderRadius.circular(10),
@@ -411,12 +484,11 @@ class _UsagecViewState extends State<UsagecView> {
     ),
   ),
 ),
-
-                  SizedBox(height: 10.0),
-           Container(
-            width: 100.h,
-            height: 10.h,
-          decoration: BoxDecoration(
+                  SizedBox(height: 3.h),
+            Container(
+                width: 100.h,
+                height: 10.h,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
   color: Colors.white,
   boxShadow: [
@@ -428,9 +500,9 @@ class _UsagecViewState extends State<UsagecView> {
     ),
   ],
 ),
-           child: Row( 
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
+               child: Row( 
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
                   Padding(padding:EdgeInsets.symmetric(horizontal: 20.0),
                   child:
                   Image.asset(
@@ -441,7 +513,7 @@ class _UsagecViewState extends State<UsagecView> {
                   ),
         SizedBox(width: 0.w),
   Column(
-             mainAxisAlignment: MainAxisAlignment.center, 
+                 mainAxisAlignment: MainAxisAlignment.center, 
                   children: [
                     Row(
                       children: [
@@ -473,16 +545,15 @@ class _UsagecViewState extends State<UsagecView> {
                       ),
                     ),
                   ],
-            ),
-            ],
-            ),
+                ),
+                ],
+                ),
           ),
                 ],
               ),
-              
+                 ), 
             ],
       ),
-      
          ],
        ),
           ]

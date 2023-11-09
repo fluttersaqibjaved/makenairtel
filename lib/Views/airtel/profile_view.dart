@@ -22,14 +22,11 @@ class _ProfileViewState extends State<ProfileView> {
               height: 100.h,
               color: Colors.grey.withOpacity(0.1),
             ),
-       Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
+      Column(
         children: [
-          SizedBox(height: 20),
-          
+          SizedBox(height: 4.h),
           Container(
-            width: 90.w,
+            width: 100.w,
             height: 20.h,
              decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
@@ -120,12 +117,17 @@ class _ProfileViewState extends State<ProfileView> {
             ),
             ),
           ),
-          SizedBox(height: 16.0),
-          Container(
-            width: 90.w,
-            height: 8.h,
-             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+          SizedBox(height: 4.h),
+           Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+      child: 
+          Column(
+            children: [
+              Container(
+                width: 100.w,
+                height: 8.h,
+                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
@@ -136,46 +138,46 @@ class _ProfileViewState extends State<ProfileView> {
     ),
   ],
 ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.payment,
-                        color: Colors.red,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.payment,
+                            color: Colors.red,
+                          ),
+                          SizedBox(width: 20),
+                          Text(
+                            'Bills & Payments',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
                       Text(
-                        'Bills & Payments',
+                        '>',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ],
                   ),
-                  Text(
-                    '>',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
+                ),
+                ),
               ),
-            ),
-            ),
-          ),
-          SizedBox(height: 8.0),
-          Container(
-            width: 90.w,
-            height: 8.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              SizedBox(height: 2.h),
+              Container(
+                width: 100.w,
+                height: 8.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
@@ -186,46 +188,46 @@ class _ProfileViewState extends State<ProfileView> {
     ),
   ],
 ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.portable_wifi_off,
-                        color: Colors.red,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.portable_wifi_off,
+                            color: Colors.red,
+                          ),
+                          SizedBox(width: 20),
+                          Text(
+                            'Portal Settings',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
                       Text(
-                        'Portal Settings',
+                        '>',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ],
                   ),
-                  Text(
-                    '>',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
+                ),
+                ),
               ),
-            ),
-            ),
-          ),
-          SizedBox(height: 8.0),
-          Container(
-            width: 90.w,
-            height: 8.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              SizedBox(height: 2.h),
+              Container(
+                width: 100.w,
+                height: 8.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
@@ -236,97 +238,97 @@ class _ProfileViewState extends State<ProfileView> {
     ),
   ],
 ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.broadcast_on_home,
-                        color: Colors.red,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.broadcast_on_home,
+                            color: Colors.red,
+                          ),
+                          SizedBox(width: 20),
+                          Text(
+                            'Broadband Settings',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(width: 20),
                       Text(
-                        'Broadband Settings',
+                        '>',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(width: 20),
-                  Text(
-                    '>',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
+                ),
+                ),
               ),
-            ),
-            ),
-          ),
-          SizedBox(height: 8.0),
-          Container(
-            width: 90.w,
-            height: 8.h,
-             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              SizedBox(height: 2.h),
+              Container(
+                width: 100.w,
+                height: 8.h,
+                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
       color: Colors.grey.withOpacity(0.5), 
       spreadRadius: 2,  
-      blurRadius: 3,  
+      blurRadius: 3,
       offset: Offset(0, 2),  
     ),
   ],
 ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(
-                        Icons.support,
-                        color: Colors.red,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.support,
+                            color: Colors.red,
+                          ),
+                          SizedBox(width: 20),
+                          Text(
+                            'Support',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
                       Text(
-                        'Support',
+                        '>',
                         style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ],
                   ),
-                  Text(
-                    '>',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
+                ),
+                ),
               ),
-            ),
-            ),
-          ),
-          SizedBox(height: 8.0),
-          Container(
-            width: 90.w,
-            height: 8.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
+              SizedBox(height: 2.h),
+              Container(
+                width: 100.w,
+                height: 8.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
   color: Colors.white,
   boxShadow: [
     BoxShadow(
@@ -337,58 +339,60 @@ class _ProfileViewState extends State<ProfileView> {
     ),
   ],
 ),
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      GestureDetector(
-                        onTap: () async {
-                          final shouldlogout = await showLogoutDialog(context);
-                          if (shouldlogout) {
-                           await FirebaseAuth.instance.signOut();
+                      Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () async {
+                              final shouldlogout = await showLogoutDialog(context);
+                              if (shouldlogout) {
+                               await FirebaseAuth.instance.signOut();
 
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                        return LoginView();
-                      }));
-                          }
-                        },
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.logout_rounded,
-                              color: Colors.red,
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                            return LoginView();
+                          }));
+                              }
+                            },
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.logout_rounded,
+                                  color: Colors.red,
+                                ),
+                                SizedBox(width: 20),
+                                Text(
+                                  'Signout',
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                            SizedBox(width: 20),
-                            Text(
-                              'Signout',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                          ),
+                        ],
+                      ),
+                      Text(
+                        '>',
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 30,
                         ),
                       ),
                     ],
                   ),
-                  Text(
-                    '>',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
+                ),
+                ),
               ),
-            ),
-            ),
+            ],
           ),
+           ),
         ],
-      ),
       ),
           ]
       ),
