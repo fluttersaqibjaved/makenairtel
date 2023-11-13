@@ -42,6 +42,7 @@ class _AirtelViewState extends State<AirtelView> {
     ),
   ),
   backgroundColor: Colors.white,
+  elevation: 0.9,
   actions: <Widget>[
    Padding(
       padding: EdgeInsets.only(right: 10.0),

@@ -26,6 +26,7 @@ class _UsagedetailView extends State<UsagedetailView> {
     ),
   ),
   backgroundColor: Colors.white,
+   elevation: 0.9,
   title: Text('USAGE DETAILS', style: TextStyle(color: Colors.black)),
   centerTitle: true,
   actions: [

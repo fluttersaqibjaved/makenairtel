@@ -76,7 +76,7 @@ class _WelcomeViewState extends State<WelcomeView> {
                             ),
                           ),
                           child: Text(
-                            'SIGN UP',
+                            'SIGNUP',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,

@@ -13,8 +13,7 @@ class _ModemViewState extends State<ModemView> {
   Widget build(BuildContext context) {
      return Scaffold(
       appBar: null,
-      body: SingleChildScrollView(
-        child: Stack(
+      body: Stack(
           children: [
             Container(
               width: 100.w,
@@ -148,6 +147,7 @@ class _ModemViewState extends State<ModemView> {
                         'Signal strength',
                         style: TextStyle(
                           color: Colors.black,
+                          fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
@@ -156,7 +156,7 @@ class _ModemViewState extends State<ModemView> {
                         '85 %',
                         style: TextStyle(
                           color: Colors.red,
-                          fontSize: 15,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -196,6 +196,7 @@ class _ModemViewState extends State<ModemView> {
             'Ping rate',
             style: TextStyle(
               color: Colors.black,
+              fontWeight: FontWeight.bold,
               fontSize: 15,
             ),
           ),
@@ -204,7 +205,7 @@ class _ModemViewState extends State<ModemView> {
             '14 ms',
             style: TextStyle(
               color: Colors.blue,
-              fontSize: 15,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -249,6 +250,7 @@ class _ModemViewState extends State<ModemView> {
                         'Download speed',
                         style: TextStyle(
                           color: Colors.black,
+                          fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
@@ -257,7 +259,7 @@ class _ModemViewState extends State<ModemView> {
                         '210.mb/s',
                         style: TextStyle(
                           color: Colors.yellow,
-                          fontSize: 15,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -297,6 +299,7 @@ class _ModemViewState extends State<ModemView> {
                         'Upload speed',
                         style: TextStyle(
                           color: Colors.black,
+                          fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
@@ -305,7 +308,7 @@ class _ModemViewState extends State<ModemView> {
                         '11.8 mb/s',
                         style: TextStyle(
                           color: Colors.purpleAccent,
-                          fontSize: 15,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -462,15 +465,12 @@ class _ModemViewState extends State<ModemView> {
     ),
   ],
 )
-
     ],
   ),
   ),
-  SizedBox(height: 3.h),
         ],
       ),
           ]
-      ),
       ),
     );
   }

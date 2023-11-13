@@ -25,7 +25,7 @@ class _ProfileViewState extends State<ProfileView> {
             ),
       Column(
         children: [
-          SizedBox(height: 4.h),
+          SizedBox(height: 3.h),
           Container(
             width: 100.w,
             height: 20.h,
@@ -121,7 +121,7 @@ class _ProfileViewState extends State<ProfileView> {
               ],
             ),
           ),
-          SizedBox(height: 4.h),
+          SizedBox(height: 3.h),
            Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: 
