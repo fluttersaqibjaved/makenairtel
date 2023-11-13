@@ -175,17 +175,19 @@ class _UsagecViewState extends State<UsagecView> {
     ),
   ],
 ),
-   child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
+   
   child: Center(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
          Padding(
-                      padding: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 22),
                       child:
+                       Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+  child:
             Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Thursday, Oct 31 - 5:34 PM',
@@ -194,23 +196,26 @@ class _UsagecViewState extends State<UsagecView> {
                         color: Colors.black,
                       ),
                     ),
-                    SizedBox(width: 22.w),
                     Icon(
                       Icons.payment,
                       color: Colors.red,
                     ),
                   ],
             ),
+                       ),
          ),
-         SizedBox(height: 1.h),
-            Divider(           
-                  color: Colors.grey.withOpacity(0.3),
-                  thickness: 1,
-            ),
+         SizedBox(height: 2.h),
+           Divider(
+        color: Colors.grey,
+        height: 0, 
+      ),
+            
             Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                      Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
@@ -232,11 +237,13 @@ class _UsagecViewState extends State<UsagecView> {
                         ),
                       ],
                     ),
+                      ),
                    Container(
                     width: 1,
-                        height: 11.h, 
+                        height: 12.h, 
                             color: Colors.grey.withOpacity(0.3),    
                    ),
+                   SizedBox(width:1.w),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -264,17 +271,18 @@ class _UsagecViewState extends State<UsagecView> {
                         ),
                       ],
                     ),
+                    SizedBox(width:1.w),
                    Container(
                     width: 1,
-                        height: 11.h, 
+                        height: 12.h, 
                             color: Colors.grey.withOpacity(0.3),    
                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Center(
+                      
+                      Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.0),
+                   child:   Center(
                          child:  Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             
                             Text(
@@ -297,22 +305,18 @@ class _UsagecViewState extends State<UsagecView> {
                           ],
                         ),
                         ),
-                       
-                      ],
-                    ),
+                      ),
                   ],
             ),
       ],
     ),
   ),
    ),
-),
-
                   SizedBox(height: 3.h),
-            Container(
-  width: 100.w,
-  height: 20.h,
-  decoration: BoxDecoration(
+                  Container(
+                    width: 100.w,
+                    height: 25.h,
+                    decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
   color: Colors.red,
   boxShadow: [
@@ -324,7 +328,12 @@ class _UsagecViewState extends State<UsagecView> {
     ),
   ],
 ),
-  child: Center(
+ child: Center(
+    child: Container(
+      width: 90.w,
+      height: 20.h,
+      
+ child: Center(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -332,20 +341,25 @@ class _UsagecViewState extends State<UsagecView> {
                           children: [
                            Column(
                               children: [
-                                Text(
-                                  'LKR449 plan',
-                                  style: TextStyle(
-                                    fontSize: 15.sp,
-                                    color: Colors.white, 
-                                  ),
-                                ),
-                                Text(
-                                  'expires on 01 Jan 2020',
-                                  style: TextStyle(
-                                    fontSize: 10.sp,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white.withOpacity(0.5), 
-                                  ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'LKR449 plan',
+                                      style: TextStyle(
+                                        fontSize: 15.sp,
+                                        color: Colors.white, 
+                                      ),
+                                    ),
+                                    Text(
+                                      'expires on 01 Jan 2020',
+                                      style: TextStyle(
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white.withOpacity(0.5), 
+                                      ),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(height: 20),
                                     Column(
@@ -368,7 +382,7 @@ class _UsagecViewState extends State<UsagecView> {
             padding: EdgeInsets.only(left: 2.w), 
             child: Icon(
               Icons.brightness_1,
-              size: 9, // Icon size
+              size: 9,
               color: Colors.white,
             ),
           ),
@@ -413,7 +427,6 @@ class _UsagecViewState extends State<UsagecView> {
     ],
   ),
 ),
-
                          ),
                       ],
                     ),
@@ -423,7 +436,7 @@ class _UsagecViewState extends State<UsagecView> {
                     SizedBox(width: 10),
                      Container(
                     width: 1,
-                            height: 20.h, 
+                            height: 19.h, 
                                 color: Colors.grey,   
                    ),
                     SizedBox(width: 3.w),
@@ -452,7 +465,7 @@ class _UsagecViewState extends State<UsagecView> {
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5), 
+                                      color: Colors.black.withOpacity(0.1), 
                                       spreadRadius: 2,  
                                       blurRadius: 3,  
                                       offset: Offset(0, 2),  
@@ -468,8 +481,7 @@ class _UsagecViewState extends State<UsagecView> {
                                     fontWeight: FontWeight.bold,
                                         ),
                                       ),  
-                                ),
-                                  
+                                ),   
                             ),
                        ],
                      ),
@@ -478,9 +490,11 @@ class _UsagecViewState extends State<UsagecView> {
       ],
     ),
   ),
-),
+    ),
+ ),
+                  ),
                   SizedBox(height: 3.h),
-            Container(
+           Container(
                 width: 100.h,
                 height: 10.h,
                 decoration: BoxDecoration(
@@ -495,18 +509,18 @@ class _UsagecViewState extends State<UsagecView> {
     ),
   ],
 ),
+ child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
                child: Row( 
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(padding:EdgeInsets.symmetric(horizontal: 20.0),
-                  child:
                   Image.asset(
           'assets/images/Group 106.png',  
           width: 20.w,
           height: 8.h,           
         ),
-                  ),
-        SizedBox(width: 0.w),
+                  
+        SizedBox(width: 1.w),
   Column(
                  mainAxisAlignment: MainAxisAlignment.center, 
                   children: [
@@ -543,6 +557,7 @@ class _UsagecViewState extends State<UsagecView> {
                 ),
                 ],
                 ),
+ ),
           ),
           SizedBox(height: 3.h),
                 ],

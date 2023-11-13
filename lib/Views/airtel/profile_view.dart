@@ -40,14 +40,15 @@ class _ProfileViewState extends State<ProfileView> {
     ),
   ],
 ),
-            child: Padding(
-             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                     Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child:
+                   Padding(
+             padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child:
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -68,6 +69,7 @@ class _ProfileViewState extends State<ProfileView> {
                     ),
                       ],
                     ),
+                   ),
                     ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15),
@@ -78,6 +80,9 @@ class _ProfileViewState extends State<ProfileView> {
                      Padding(
                   padding: const EdgeInsets.only(top: 15),
                   child:
+                  Padding(
+             padding: EdgeInsets.symmetric(horizontal: 16.0),
+            child:
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -104,17 +109,16 @@ class _ProfileViewState extends State<ProfileView> {
                           style: TextStyle(
                             color: Colors.red,
                             fontSize: 15,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ],
                     ),
                       ],
                     ),
+                  ),
                      ),
-                  
-              
               ],
-            ),
             ),
           ),
           SizedBox(height: 4.h),

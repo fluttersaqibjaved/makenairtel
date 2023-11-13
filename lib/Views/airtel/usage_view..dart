@@ -71,7 +71,7 @@ class _UsageViewState extends State<UsageView> {
                   Expanded(
                     child: Container(
                       width: 40.w,
-                      height: 15.h,
+                      height: 17.h,
                       decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
   color: Colors.white,
@@ -84,33 +84,38 @@ class _UsageViewState extends State<UsageView> {
     ),
   ],
 ),
-                       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
-                          children: [
-                            Text(
-                              '10 GB',
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold, 
-                              ),
-                            ),
-                            SizedBox(width: 1.w),
-                            Text(
-                              'per day',
-                              style: TextStyle(
-                                color: Colors.blueAccent,
-                                fontSize: 12.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
+                             Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
+                                Row(
+                                  children: [
+                                    Text(
+                                      '10 GB',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 25.0,
+                                        fontWeight: FontWeight.bold, 
+                                      ),
+                                    ),
+                                    SizedBox(width: 1.w),
+                                    Text(
+                                      'per day',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                             ),
+                        SizedBox(height: 1.h),
+                          Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
                               Row(
                                 children:[
                             Text(
@@ -131,10 +136,15 @@ class _UsageViewState extends State<UsageView> {
                             ),
                                 ]
                               ),
+                          ),
+                          SizedBox(height: 10),
                           Divider(
                             color: Colors.grey,
                           ),
-                          SizedBox(width: 8),
+                          SizedBox(height: 8),
+                            Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
@@ -148,17 +158,18 @@ class _UsageViewState extends State<UsageView> {
                               ),
                             ],
                           ),
+                            ),
                         ],
                       ),
-                       ),
+                       
                     ),
                   ),
                   SizedBox(width: 16.0),
-                  Expanded(
+                 Expanded(
                     child: Container(
                       width: 40.w,
-                      height: 15.h,
-                    decoration: BoxDecoration(
+                      height: 17.h,
+                      decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
   color: Colors.white,
   boxShadow: [
@@ -170,63 +181,72 @@ class _UsageViewState extends State<UsageView> {
     ),
   ],
 ),
-                       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                        
-   Row(
-  children: [
-    Text(
-      '5 GB',
-      style: TextStyle(
-        color: Colors.blueAccent,
-        fontSize: 25.0,
-        fontWeight: FontWeight.bold, 
-      ),
-    ),
-    SizedBox(width: 1.w),
-    Text(
-      'per day',
-      style: TextStyle(
-        color: Colors.blueAccent,
-        fontSize: 12.0,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  ],
-),
-SizedBox(height: 10),
-       Row(
-        children:[
-    Text(
-      'LKR449',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 15.0,
-      ),
-    ),
-    SizedBox(width: 2.w),
-    Text(
-      'Validity: 34 days',
-      style: TextStyle(
-        color: Colors.grey,
-        fontSize: 10.0,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-        ]
-       ),
+                             Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
+                                Row(
+                                  children: [
+                                    Text(
+                                      '5 GB',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 25.0,
+                                        fontWeight: FontWeight.bold, 
+                                      ),
+                                    ),
+                                    SizedBox(width: 1.w),
+                                    Text(
+                                      'per day',
+                                      style: TextStyle(
+                                        color: Colors.blueAccent,
+                                        fontSize: 12.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                             ),
+                        SizedBox(height: 1.h),
+                          Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
+                              Row(
+                                children:[
+                            Text(
+                              'LKR449',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                         SizedBox(width: 2.w) ,
+                            Text(
+                              'Validity: 34 days',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                                ]
+                              ),
+                          ),
+                          SizedBox(height: 10),
                           Divider(
                             color: Colors.grey,
                           ),
-                          SizedBox(width: 10),
+                          SizedBox(height: 8),
+                            Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      child:
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
-                                'Viewdetails >>',
+                                'View details >>',
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 12,
@@ -235,9 +255,10 @@ SizedBox(height: 10),
                               ),
                             ],
                           ),
+                            ),
                         ],
                       ),
-                       ),
+                       
                     ),
                   ),
                 ],
@@ -258,18 +279,18 @@ SizedBox(height: 10),
     ),
   ],
 ),
+ child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
                child: Row( 
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(padding:EdgeInsets.symmetric(horizontal: 20.0),
-                  child:
                   Image.asset(
           'assets/images/Group 106.png',  
           width: 20.w,
           height: 8.h,           
         ),
-                  ),
-        SizedBox(width: 0.w),
+                  
+        SizedBox(width: 1.w),
   Column(
                  mainAxisAlignment: MainAxisAlignment.center, 
                   children: [
@@ -306,6 +327,7 @@ SizedBox(height: 10),
                 ),
                 ],
                 ),
+ ),
           ),
              ],
            ),
@@ -327,7 +349,7 @@ SizedBox(height: 10),
   ],
 ),
              child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -335,7 +357,7 @@ SizedBox(height: 10),
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                  Text(
-                  '  1 month',
+                  '1 month',
                   style: TextStyle(
                     color: Colors.red,
                     fontSize: 18,
@@ -362,7 +384,7 @@ SizedBox(height: 10),
                 ),
                 SizedBox(width: 20.0),
                  Text(
-                  '8 months  ',
+                  '8 months',
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 16,

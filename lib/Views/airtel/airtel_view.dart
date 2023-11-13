@@ -4,18 +4,6 @@ import 'package:makenairtel/Views/airtel/modem_view.dart';
 import 'package:makenairtel/Views/airtel/profile_view.dart';
 import 'package:makenairtel/Views/airtel/usage..dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: AirtelView(),
-    );
-  }
-}
 
 class AirtelView extends StatefulWidget {
   @override
