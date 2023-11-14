@@ -49,7 +49,7 @@ class _ModemViewState extends State<ModemView> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            ' Kalutara',
+            'Kalutara',
             style: TextStyle(
               color: Colors.black,
               fontSize: 15,
